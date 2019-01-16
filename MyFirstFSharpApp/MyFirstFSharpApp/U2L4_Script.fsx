@@ -57,7 +57,7 @@ open System.Net
 open System.Windows.Forms
 
 let webClient = new WebClient()
-let fsharpOrg = webClient.DownloadString(Uri "http://fsharp.org")
+let fsharpOrg = webClient.DownloadString(Uri("http://fsharp.org"))
 let browser =
     new WebBrowser( ScriptErrorsSuppressed = true,
                     Dock = DockStyle.Fill,
