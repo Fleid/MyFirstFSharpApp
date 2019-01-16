@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="scratchpad.fsx" />
+    <None Include="U2L4_Script.fsx" />
+    <None Include="U1L3_scratchpad.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
