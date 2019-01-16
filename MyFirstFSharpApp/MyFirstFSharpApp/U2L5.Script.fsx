@@ -19,3 +19,14 @@ let add4 (a, b) =
 let add5 (a, b) =
     (a + b) * 1.0
 
+//5.9
+open System.Collections.Generic
+
+let createList(first, second) =
+    let output = List()
+    output.Add(first)
+    output.Add(second)
+    output
+
+createList(1,2)
+createList("a","b")
