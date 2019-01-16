@@ -65,3 +65,22 @@ let browser =
 let form = new Form(Text = "Hello from F#!")
 form.Controls.Add browser
 form.Show()
+
+// 4.8 refactor
+
+open System
+open System.Net
+open System.Windows.Forms
+
+let buildForm stringUri = 
+    let webClient = new WebClient()
+    let fsharpOrg = webClient.DownloadString(Uri(stringUri))
+    let browser =
+        new WebBrowser( ScriptErrorsSuppressed = true,
+                        Dock = DockStyle.Fill,
+                        DocumentText = fsharpOrg)
+    let form = new Form(Text = "Hello from F#!")
+    form.Controls.Add browser
+    form
+
+buildForm("http://fsharp.org").Show()
