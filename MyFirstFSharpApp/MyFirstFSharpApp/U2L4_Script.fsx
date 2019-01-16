@@ -48,3 +48,20 @@ let estimateAges (familyName, year1, year2, year3) =
     sprintf "Average age for family %s is %d" familyName averageAge
 
 estimateAges("E",1980,1990,2018)
+
+// 4.8
+// Windows form that contains WebBrowser control for hosting the content of a web resource to be downloaded
+
+open System
+open System.Net
+open System.Windows.Forms
+
+let webClient = new WebClient()
+let fsharpOrg = webClient.DownloadString(Uri "http://fsharp.org")
+let browser =
+    new WebBrowser( ScriptErrorsSuppressed = true,
+                    Dock = DockStyle.Fill,
+                    DocumentText = fsharpOrg)
+let form = new Form(Text = "Hello from F#!")
+form.Controls.Add browser
+form.Show()
