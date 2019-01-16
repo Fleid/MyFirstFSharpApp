@@ -24,3 +24,11 @@ let doStuffWithTwoNumbers(first, second) =
     doubled
 
 doStuffWithTwoNumbers(3,4)
+
+// 4.6
+
+let estimagedAge =
+    let age =
+        let year = DateTime.Now.Year
+        year - 1980
+    sprintf "You are about %d years old!" age
